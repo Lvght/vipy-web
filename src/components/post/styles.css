@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.post {
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 142.75px;
+  background: #fdfdfd;
+  border-radius: 10px;
+  color: black;
+}
+
+.card .content {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.card .header {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: white;
+  border: 0;
+  min-height: 53px;
+  display: inline-flex;
+  padding: 0;
+  margin: auto;
+}
+
+.card .header h3 {
+  color: #8a8a8a;
+  font-size: 17px;
+  font-style: italic;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.card .header h2 {
+  margin-left: 5px;
+  line-height: 20px;
+}
+
+.card .header h4 {
+  color: #8a8a8a;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.profileLink {
+  position: relative;
+  display: inline-flex;
+  font-size: 20px;
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.userIdentification {
+  display: grid;
+  line-height: 23px;
+}
+
+.userIdentification div {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+}
+
+.card .header img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+}
+
+.postAuthorProfileImage {
+  display: flex;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.date {
+  color: black;
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.date h4 {
+  vertical-align: middle;
+}
+
+.commentInput {
+  border: 0;
+  background-color: transparent;
+  width: 80%;
+}
+
+.card .body {
+  white-space: pre-line;
+  font-size: 30px;
+  padding: 0;
+}
+
+.postContent {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.commentsQuantity {
+  display: flex;
+  position: relative;
+  font-size: 14px;
+  background-color: #ebebeb;
+  height: 37px;
+  border-radius: 36px;
+  vertical-align: middle;
+}
+
+.commentInputProfileImage {
+  width: 30px;
+  height: 30px;
+}
+
+.commentInputProfileImage img {
+  width: 100%;
+}
+
+.commentsQuantity > * {
+  vertical-align: middle;
+  font-size: 12px;
+  font-style: italic;
+  color: #727272;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 8px;
+}
+
+.seeComments {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #727272;
+}
+
+.commentCount {
+  margin-left: auto;
+  margin-right: 15px;
+  font-size: 15px;
+}
+
+.seePost {
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #2391c7;
+  font-weight: bolder;
+  width: 100%;
+  align-items: center;
+}
+
+.commentariesDiv {
+  margin-top: 20px;
+}
+
+.commentariesTitle {
+  font-weight: 500;
+}
+
+.commentaries {
+  margin: 0 0 0 40px;
+}
+
+.postActions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+
+.postActions .action {
+  margin: 0 10px;
+}
+
+.postActions .action button {
+  border: 0;
+  cursor: pointer;
+  font-size: large;
+}
+
+.postActions .optionDelete {
+  color: #ff0000;
+}
+
+.postActions .optionEdit {
+  color: #188c18;
+}
+
+@media only screen and (max-width: 950px) {
+  .commentaries {
+    margin: 0;
+  }
+}
