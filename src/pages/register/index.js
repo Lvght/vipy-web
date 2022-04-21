@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router";
+import {Link} from "react-router-dom";
+import {useNavigate} from "react-router";
 
 export default function Register() {
   const navigate = useNavigate();
@@ -9,12 +9,12 @@ export default function Register() {
     <div className="login">
       <div className="left">
         <center>
-          <img className="logotipo" alt="vipyLogo" src="Logotipo.svg" />
+          <img className="logotipo" alt="vipyLogo" src="/Logotipo.svg"/>
           <form className="loginForm" method="post" id="registerForm">
-            <input placeholder="Display Name" name="display_name" />
-            <input placeholder="UserName" name="username" />
-            <input placeholder="Email" type="email" name="email" />
-            <input type="password" placeholder="Password" name="password" />
+            <input placeholder="Display Name" name="display_name"/>
+            <input placeholder="UserName" name="username"/>
+            <input placeholder="Email" type="email" name="email"/>
+            <input type="password" placeholder="Password" name="password"/>
             <input
               placeholder="Data de nascimento (dd-mm-aaaa)"
               type="date"
@@ -39,7 +39,7 @@ export default function Register() {
         </center>
       </div>
       <div className="right">
-        <img alt="loginBackground" src="bg.png" />
+        <img alt="loginBackground" src="/bg.png"/>
       </div>
     </div>
   );

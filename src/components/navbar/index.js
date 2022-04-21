@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
-import { MdLogout } from "react-icons/md";
-import { useNavigate } from "react-router";
+import {MdLogout} from "react-icons/md";
+import {useNavigate} from "react-router";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -9,8 +9,8 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="align">
         <div className="logo">
-          <a href="home.html">
-            <img alt="vipyLogo" src="Logotipo.svg" />
+          <a href="/timeline">
+            <img alt="vipyLogo" src="/Logotipo.svg"/>
           </a>
         </div>
         <MdLogout

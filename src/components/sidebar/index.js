@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import { MdHome, MdChat, MdSearch, MdNotifications } from "react-icons/md";
+import {MdChat, MdHome, MdNotifications, MdSearch} from "react-icons/md";
 
 export default function Sidebar() {
   return (
@@ -10,13 +10,13 @@ export default function Sidebar() {
           <div className="profile">
             <div className="imageContainer">
               <div className="cover">
-                <img alt="profileCover" src="coverImage.gif" />
+                <img alt="profileCover" src="/coverImage.gif"/>
               </div>
             </div>
             <a id="currentUserProfileLink" href="profile.html">
               <div className="userProfilePictureSidebar">
                 <div className="userProfilePicture">
-                  <img alt="profile" src="pfp.gif" />
+                  <img alt="profile" src="/pfp.gif"/>
                 </div>
               </div>
             </a>

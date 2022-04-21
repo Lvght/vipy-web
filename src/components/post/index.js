@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import {Link} from "react-router-dom";
 
 export default function Post() {
   return (
@@ -9,26 +10,26 @@ export default function Post() {
           <a href="profile.html" className="profileLink">
             <div className="postAuthorProfileImage" hidden>
               <div className="userProfilePicture">
-                <img alt="profile" src="../assets/pfp.gif" />
+                <img alt="profile" src="/pfp.gif"/>
               </div>
             </div>
             <div className="userIdentification">
               <div>
-                <h2 className="name">Carregando</h2>
-                <h3 className="username">Carregando</h3>
+                <h2 className="name">Picachu</h2>
+                <h3 className="username">@picachu</h3>
               </div>
               <h4 className="dateSince">Postado há 2 min</h4>
             </div>
           </a>
         </div>
-
+  
         <div className="body">
           <p className="postContent">Testando o post! Tudo funcionando!</p>
         </div>
         <div className="commentsQuantity" id="" hidden>
           <div className="commentInputProfileImage">
             <div className="userProfilePicture">
-              <img alt="profile" src="../assets/pfp.gif" />
+              <img alt="profile" src="/pfp.gif"/>
             </div>
           </div>
           <input
@@ -41,9 +42,9 @@ export default function Post() {
             42
           </h4>
         </div>
-        <a href="post.html" className="seePost">
+        <Link className="seePost" to="detail">
           Ver postagem
-        </a>
+        </Link>
       </div>
     </article>
   );
