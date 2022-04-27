@@ -1,0 +1,49 @@
+.profilePage {
+  position: relative;
+  font-size: 20px;
+  margin: 10px auto;
+  z-index: 1;
+}
+
+.profilePage .cover img {
+  width: 100%;
+}
+
+.editProfile {
+  height: inherit !important;
+}
+
+.editProfile label {
+  display: block;
+}
+
+.editProfile input,
+select {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.editProfile textarea {
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+  .profilePage {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .profilePage {
+    width: 98%;
+  }
+}
+
+.profileInformation {
+  margin: 24px 0;
+}
+
+.profileInformation h4,
+.profileInformation h3 {
+  font-weight: bold;
+}

@@ -9,6 +9,7 @@
 @media only screen and (max-width: 1000px) and (min-width: 600px) {
   .timeline {
     width: 90%;
+    padding: 55px;
   }
 }
 
@@ -34,6 +35,7 @@
 
   .timeline {
     width: 100%;
+    padding-left: 55px;
   }
 
   .sideBarRight {

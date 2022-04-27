@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.css";
-import {MdChat, MdHome, MdNotifications, MdSearch} from "react-icons/md";
+import { MdChat, MdHome, MdNotifications, MdSearch } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
   return (
@@ -10,22 +11,22 @@ export default function Sidebar() {
           <div className="profile">
             <div className="imageContainer">
               <div className="cover">
-                <img alt="profileCover" src="/coverImage.gif"/>
+                <img alt="profileCover" src="/coverImage.gif" />
               </div>
             </div>
-            <a id="currentUserProfileLink" href="profile.html">
+            <Link id="currentUserProfileLink" to="/timeline/profile">
               <div className="userProfilePictureSidebar">
                 <div className="userProfilePicture">
-                  <img alt="profile" src="/pfp.gif"/>
+                  <img alt="profile" src="/pfp.gif" />
                 </div>
               </div>
-            </a>
-            <a href="profile.html">
+            </Link>
+            <Link to="profile.html">
               <div className="profileInformations">
                 <h2 className="name currentName">Pikachu</h2>
                 <h3 className="username currentUsername">@Pikachu</h3>
               </div>
-            </a>
+            </Link>
             {/* <div className="stars">
               <span className="material-icons"> star </span>
               <span className="material-icons"> star </span>
@@ -42,12 +43,12 @@ export default function Sidebar() {
               +
             </button>
           </li>
-          <a href="home.html">
+          <Link to="/timeline">
             <li className="item-menu">
               <MdHome />
               <span className="menu">Inicio</span>
             </li>
-          </a>
+          </Link>
           <a href="#">
             <li className="item-menu">
               <MdChat />
