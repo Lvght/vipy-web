@@ -5,7 +5,7 @@ import {useNavigate} from "react-router";
 
 export default function Login() {
   const navigate = useNavigate();
-
+  
   return (
     <div className="login">
       <div className="left">
@@ -13,7 +13,7 @@ export default function Login() {
         <form className="loginForm" id="loginForm">
           <input placeholder="Username" name="username"/>
           <input placeholder="Password" type="password" name="password"/>
-    
+  
           <button
             className="loginButton"
             id="loginButton"
@@ -23,12 +23,12 @@ export default function Login() {
           >
             Login
           </button>
-
-          <br />
+  
+          <br/>
           <a href="/forgotPassword">Esqueceu sua senha?</a>
-          <hr />
+          <hr/>
         </form>
-
+  
         <Link to="/register" className="goToRegisterButton">
           Cadastrar
         </Link>
