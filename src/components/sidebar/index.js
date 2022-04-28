@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import { MdChat, MdHome, MdNotifications, MdSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
+import CreatePostModal from "../createPostModal";
 
 export default function Sidebar() {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="sidebarContent">
       <div className="sidebarScoll">
@@ -23,8 +27,8 @@ export default function Sidebar() {
             </Link>
             <Link to="profile.html">
               <div className="profileInformations">
-                <h2 className="name currentName">Pikachu</h2>
-                <h3 className="username currentUsername">@Pikachu</h3>
+                <h2 className="name currentName">{user.display_name}</h2>
+                <h3 className="username currentUsername">@{user.username}</h3>
               </div>
             </Link>
             {/* <div className="stars">
@@ -36,10 +40,20 @@ export default function Sidebar() {
             </div> */}
           </div>
           <li className="newPostButton">
-            <button className="newPost" id="myBtn">
+            <button
+              className="newPost"
+              id="myBtn"
+              onClick={() => {
+                setIsOpen(true);
+              }}
+            >
               Novo Post
             </button>
-            <button className="newPostPlus" id="myBtnMobile">
+            <button
+              className="newPostPlus"
+              id="myBtnMobile"
+              onClick={() => setIsOpen(true)}
+            >
               +
             </button>
           </li>
@@ -69,6 +83,7 @@ export default function Sidebar() {
           </a>
         </ul>
       </div>
+      <CreatePostModal isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 }

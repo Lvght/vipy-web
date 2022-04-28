@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Routes from "./routes";
+import "./utils/axiosInterceptors";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
