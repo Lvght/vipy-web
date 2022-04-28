@@ -58,7 +58,7 @@ export default function Post({ post }) {
             42
           </h4>
         </div>
-        <Link className="seePost" to="detail">
+        <Link className="seePost" to={`detail/${post.id}`}>
           Ver postagem
         </Link>
       </div>

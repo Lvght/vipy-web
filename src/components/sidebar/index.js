@@ -4,9 +4,8 @@ import { MdChat, MdHome, MdNotifications, MdSearch } from "react-icons/md";
 import { Link } from "react-router-dom";
 import CreatePostModal from "../createPostModal";
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen, setIsOpen, posts, setPosts }) {
   const user = JSON.parse(localStorage.getItem("user"));
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="sidebarContent">
@@ -83,7 +82,12 @@ export default function Sidebar() {
           </a>
         </ul>
       </div>
-      <CreatePostModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <CreatePostModal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+        posts={posts}
+        setPosts={setPosts}
+      />
     </div>
   );
 }

@@ -1,30 +1,54 @@
 import React, { useEffect, useState } from "react";
-import Modal from "react-modal";
 import "./styles.css";
-export default function CreatePostModal({ isOpen, setIsOpen }) {
+import api from "../../services/api";
+export default function CreatePostModal({
+  isOpen,
+  setIsOpen,
+  posts,
+  setPosts,
+}) {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const [content, setContent] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    const data = {
+      content,
+    };
+    api.post("/posts/", data).then((res) => {
+      setPosts([res.data, ...posts]);
+      setContent("");
+      setIsOpen(false);
+    });
+  }
   if (!isOpen) return null;
   return (
     <div id="myModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" onClick={() => setIsOpen(false)}>
+          &times;
+        </span>
         <div class="post createPost">
-          <form method="post" id="createPostForm">
+          <form method="post" id="createPostForm" onSubmit={handleSubmit}>
             <div class="card cardPost" id="cardPost">
               <div class="content">
                 <div class="card-header" id="cardHeaderPost">
                   <div class="profileLink">
                     <div class="postAuthorProfileImage" hidden>
                       <div class="userProfilePicture">
-                        <img alt="profile" src="../assets/pfp.gif" />
+                        <img alt="profile" src="/pfp.gif" />
                       </div>
                     </div>
                     <div class="userIdentification">
                       <div>
-                        <h2 class="name currentName">Carregando...</h2>
+                        <h2 class="name currentName">{user.display_name}</h2>
                         <br />
-                        <h3 class="username currentUsername">Carregando...</h3>
+                        <h3 class="username currentUsername">
+                          @{user.username}
+                        </h3>
                       </div>
-                      <h4>Agora</h4>
+                      Agora
                     </div>
                   </div>
                 </div>
@@ -35,6 +59,7 @@ export default function CreatePostModal({ isOpen, setIsOpen }) {
                       class="textArea"
                       name="content"
                       placeholder="Comente algo..."
+                      onChange={(e) => setContent(e.target.value)}
                     ></textarea>
                   </div>
                 </div>

@@ -1,19 +1,7 @@
 import { useEffect, useState } from "react";
 import Post from "../../components/post";
 import api from "../../services/api";
-export default function Timeline() {
-  const [posts, setPosts] = useState([]);
-
-  function loadPosts() {
-    api.get("/posts/").then((response) => {
-      setPosts(response.data);
-    });
-  }
-
-  useEffect(() => {
-    loadPosts();
-  }, []);
-
+export default function Timeline({ posts }) {
   return (
     <>
       {posts.map((post) => (
