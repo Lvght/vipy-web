@@ -39,7 +39,7 @@ export default function TimelineWrapper() {
         <Routes>
           <Route path="/" element={<Timeline posts={posts} />} />
           <Route path="/detail/:postId" element={<Detail />} />
-          <Route path="/profile" exact element={<Profile />} />
+          <Route path="/profile/:userId" exact element={<Profile />} />
         </Routes>
       </div>
     </>

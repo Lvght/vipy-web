@@ -23,7 +23,7 @@ export default function Verify() {
 
         console.log(token);
         localStorage.setItem("token", token);
-        navigate("/timeline");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);

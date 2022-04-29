@@ -23,7 +23,7 @@ export default function Post({ post }) {
     <article className="post card">
       <div className="content">
         <div className="header">
-          <Link to="/timeline/profile" className="profileLink">
+          <Link to={`/timeline/profile/${post.author.id}`} className="profileLink">
             <div className="postAuthorProfileImage" hidden>
               <div className="userProfilePicture">
                 <img alt="profile" src="/pfp.gif" />
