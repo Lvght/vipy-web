@@ -9,11 +9,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="align">
-        <div className="logo">
-          <Link to="/timeline">
-            <img alt="vipyLogo" src="/Logotipo.svg" />
-          </Link>
-        </div>
+        <Logo/>
         <MdLogout
           className="logoutIcon"
           size={30}
@@ -24,4 +20,14 @@ export default function Navbar() {
       </div>
     </nav>
   );
+}
+
+class Logo extends React.Component{
+
+  render(){
+    return  (<div className="logo">
+          <Link to="/timeline">
+            <img alt="vipyLogo" src="/Logotipo.svg" />
+          </Link>
+        </div>)}
 }
