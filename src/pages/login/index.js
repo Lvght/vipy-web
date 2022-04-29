@@ -8,6 +8,8 @@ export default function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,7 +19,7 @@ export default function Login() {
       username,
       password,
     };
-
+    setError("")
     api
       .post("/profiles/login/", data)
       .then((response) => {
@@ -33,6 +35,8 @@ export default function Login() {
       })
       .catch((error) => {
         console.log(error);
+        setError("Usuário ou senha inválidos");
+
       });
   }
 
@@ -52,7 +56,7 @@ export default function Login() {
             name="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-
+          <span className="error">{`${error}`}</span>
           <button className="loginButton" id="loginButton">
             Login
           </button>

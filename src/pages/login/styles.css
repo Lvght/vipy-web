@@ -11,7 +11,10 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
+.error {
+  color: red !important;
+  font-size: medium;
+}
 .login span {
   color: white;
 }
