@@ -17,14 +17,14 @@ export default function Sidebar({ isOpen, setIsOpen, posts, setPosts }) {
                 <img alt="profileCover" src="/coverImage.gif" />
               </div>
             </div>
-            <Link id="currentUserProfileLink" to="/timeline/profile">
+            <Link id="currentUserProfileLink" to={`/timeline/profile/${user.id}`}>
               <div className="userProfilePictureSidebar">
                 <div className="userProfilePicture">
                   <img alt="profile" src="/pfp.gif" />
                 </div>
               </div>
             </Link>
-            <Link to="profile.html">
+            <Link to={`/timeline/profile/${user.id}`}>
               <div className="profileInformations">
                 <h2 className="name currentName">{user.display_name}</h2>
                 <h3 className="username currentUsername">@{user.username}</h3>
