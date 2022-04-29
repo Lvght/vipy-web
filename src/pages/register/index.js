@@ -50,7 +50,7 @@ export default function Register() {
         console.log(user);
         localStorage.setItem("token", token);
         localStorage.setItem("user", JSON.stringify(user));
-        navigate("/recovery");
+        navigate("/verify");
       }).catch((error) => {
         console.log(error.response, error.response.data);
         for(let i in error.response.data){
@@ -107,7 +107,7 @@ export default function Register() {
               name="password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            {/* <span className="error">{`${erros['birthday'][0]}`}</span> */}
+            <span className="error">{`${erros['birthday'][0]}`}</span>
             <input
               placeholder="Data de nascimento (dd-mm-aaaa)"
               type="date"

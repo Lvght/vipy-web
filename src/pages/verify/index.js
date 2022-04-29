@@ -18,10 +18,11 @@ export default function Verify() {
     api
       .post("/profiles/verify/", data)
       .then((response) => {
-        const token = response.data.token;
-        const user = response.data.user;
+        const token = response.data.tokens;
+        delete response.data.tokens;
+
+        console.log(token);
         localStorage.setItem("token", token);
-        localStorage.setItem("user", JSON.stringify(user));
         navigate("/timeline");
       })
       .catch((error) => {
